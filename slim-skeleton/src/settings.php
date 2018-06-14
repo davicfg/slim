@@ -17,14 +17,15 @@ return [
         ],
 
         'db' => [
-            'driver' => 'mysql',
-            'host' => 'localhost',
-            'database' => 'slim_son',
-            'usernmae' => 'root',
-            'password' => '1234',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
+          'driver' => 'mysql',
+          'host' => 'localhost',
+          'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+          'database' => 'slim_son',
+          'username' => 'slim',
+          'password' => '1234',
+          'charset' => 'utf8',
+          'collation' => 'utf8_unicode_ci',
+          'prefix' => '',
         ],
     ],
 ];

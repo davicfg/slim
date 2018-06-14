@@ -17,3 +17,13 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+//eloquent
+$container['db'] = function ($c) {
+  $settings = $c->get('settings')['db'];
+  $capsule = new \Illuminate\Database\Capsule\Manager;
+  $capsule->addConnection($settings);
+  $capsule->setAsGlobal();
+  $capsule->bootEloquent();
+  return $capsule;
+};
