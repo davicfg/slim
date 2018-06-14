@@ -15,5 +15,16 @@ return [
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        'db' => [
+          'driver' => 'mysql',
+          'host' => 'localhost',
+          'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+          'database' => 'curso_slim_rest',
+          'username' => 'slim',
+          'password' => '1234',
+          'charset' => 'utf8',
+          'collation' => 'utf8_unicode_ci',
+          'prefix' => '',
+        ],
     ],
 ];
