@@ -18,10 +18,10 @@ return [
         'db' => [
           'driver' => 'mysql',
           'host' => 'localhost',
-          'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+          // 'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
           'database' => 'curso_slim_rest',
-          'username' => 'slim',
-          'password' => '1234',
+          'username' => 'root',
+          'password' => 'davi.12345',
           'charset' => 'utf8',
           'collation' => 'utf8_unicode_ci',
           'prefix' => '',
