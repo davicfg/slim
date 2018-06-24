@@ -29,6 +29,13 @@ class UsersTable extends AbstractMigration
      */
     public function change()
     {
+        $users = $this->table('users');
 
+        $users->addColumn('name', 'string', ['limit' => 100]);
+        $users->addColumn('email', 'string', ['limit' => 250]);
+        $users->addColumn('password', 'string', ['limit' => 100]);
+        $users->addColumn('created_at', 'datetime');
+        $users->addColumn('updated_at', 'datetime');
+        $users->create();
     }
 }
