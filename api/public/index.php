@@ -26,5 +26,8 @@ require __DIR__ . '/../src/middleware.php';
 // Register routes
 require __DIR__ . '/../src/routes.php';
 
+//Init the con with database
+$container['db'];
+
 // Run app
 $app->run();
